@@ -1,0 +1,150 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+   
+    text-align: center;
+    height: 100vh;
+    background-image: url("tic-tac-toe.jpg");
+    background-size: cover;
+    backdrop-filter: blur(10px);
+}
+
+
+.container{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.game{
+    height: 57vmin;
+    width: 57vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.9vmin;
+    column-gap:0.9vmin;
+    border-radius: 15px;
+    border:5px solid yellow ;
+    backdrop-filter: blur(7px);
+    animation: spin 5s ease-in 0s infinite alternate;
+    
+}
+
+
+@keyframes spin{
+    0%{ 
+        border-color:rgb(255, 149, 0);
+        box-shadow: -15px -20px 25px aqua;
+    }
+    30%{ 
+        border-color:#6ff118 ;
+        box-shadow:-15px -20px 25px aqua ;
+    }
+    50%{
+        border-color:rgb(247, 0, 255) ;
+        
+    }
+    60%{ 
+        border-color:rgb(38, 0, 255) ;
+        box-shadow:15px 20px 25px lawngreen ;
+    }
+    100%{
+        border-color:rgb(255, 0, 0) ;
+        box-shadow:15px 20px 25px lawngreen ;
+    }
+}
+
+
+.box{
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    /*border: none;*/
+    box-shadow: 0,0,1rem rgb(0,0,0,0.3);
+    font-size: 8vmin;
+    color: crimson;
+    background-color: #ffffc7;
+}
+
+
+#reset-btn{
+    padding:1rem;
+    font-size: 1.25rem;
+    background: linear-gradient(to right,blue,rgb(0, 179, 255),aqua,white);
+    color: black;
+    border-radius: 1rem;
+    margin-top: -8px;
+     border: none;
+     animation: button 1s ease-in-out 0s infinite alternate-reverse ;
+}
+
+
+
+    @keyframes button{
+        from{
+            font-size:1.25rem;
+        }
+        to{
+            font-size:1.40rem;
+        }
+    }
+ #reset-btn:hover{
+    box-shadow: -7px -8px 15px aqua;
+    }
+
+
+.heading{
+    height: 60px;
+    background:linear-gradient(to right,red,rgb(255, 38, 0), rgb(255, 0, 119),rgb(255, 0, 157),rgb(179, 0, 255),rgb(76, 0, 255),blue);
+    color:white;
+   text-align: center;
+   padding-top: 10px;
+   font-size: 25px;   
+}
+
+.msg-container{
+    margin-top: 250px;
+    margin-left: 1000px;
+    position: absolute;
+    color: white;
+    font-size: 60px;
+}
+
+
+.hide{
+    display: none;
+}
+
+#new-btn{
+    height: 40px;
+    width: 150px;
+    font-size: 25px;
+    border-radius: 15px;
+    background: linear-gradient(to right, red,red,rgb(255, 255, 255),white);
+    animation: newbtn 2.5s ease-in-out 0s infinite alternate-reverse ;
+}
+
+
+@keyframes newbtn{
+    from{
+         
+          transform: translate(0px);
+    }
+    to{
+        
+        transform: translate(30px);
+    }
+}
+
+#new-btn:hover{
+    box-shadow: -7px -8px 18px white;
+}
